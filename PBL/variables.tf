@@ -47,3 +47,28 @@ variable "environment" {
   type        = string
   description = "environment"
 }
+
+variable "ami" {
+  type        = string
+  description = "AMI ID for the launch template"
+}
+
+variable "keypair" {
+  type        = string
+  description = "keypair for the instances"
+}
+
+variable "account_no" {
+  type        = number
+  description = "aws account number"
+}
+
+variable "master-username" {
+  type        = string
+  description = "RDS admin username"
+}
+
+variable "master-password" {
+  type        = string
+  description = "RDS master password"
+}
