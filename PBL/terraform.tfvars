@@ -22,9 +22,15 @@ keypair = "Micolo"
 
 account_no = "945397719425"
 
-master-username = "uzuazoraro"
+master-username = "micahdb"
 
 master-password = "devopstraining"
+
+min_size = 2
+
+max_size = 2
+
+desired_capacity = 2
 
 tags = {
   Owner-Email     = "micaho2000@gmail.com"

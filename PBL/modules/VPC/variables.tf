@@ -6,7 +6,7 @@ variable "vpc_cidr" {
 }
 
 variable "enable_dns_support" {
-  type = bool
+  type = bool 
 }
 
 variable "enable_dns_hostnames" {
@@ -32,51 +32,27 @@ variable "preferred_number_of_private_subnets" {
 }
 
 variable "private_subnets" {
-  type        = list(any)
+  type = list(any)
   description = "list of private subnets"
 }
 
+
 variable "public_subnets" {
-  type        = list(any)
+  type = list(any)
   description = "list of public subnets"
 }
 
+variable "tags" {
+  description = "A mapping of tags to assign to all resources."
+  type        = map(string)
+  default     = {}
+}
+
 variable "name" {
-  type    = string
-  default = "ACS"
+  type = string
+  description = "names of various concepts"
 }
 
 variable "environment" {
   default = "true"
-  }
-
-variable "ami" {
-  type        = string
-  description = "AMI ID for the launch template"
-}
-
-variable "keypair" {
-  type        = string
-  description = "keypair for the instances"
-}
-
-variable "account_no" {
-  type        = number
-  description = "aws account number"
-}
-
-variable "master-username" {
-  type        = string
-  description = "RDS master username"
-}
-
-variable "master-password" {
-  type        = string
-  description = "RDS master password"
-}
-
-variable "tags" {
-  description = "A mapping of tags to assign to all resuorces"
-  type        = map(string)
-  default     = {}
 }
